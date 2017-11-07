@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ce9f165c6f4a0b943aa820cc896a1362
+timeCreated: 1509502463
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Glitch
+  fontNames:
+  - Glitch
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
