@@ -43,7 +43,6 @@ public class Fading : MonoBehaviour {
             float alphaChange = Time.deltaTime / fadeTime;
             currentColor.a += alphaChange;
             fadePanel.color = currentColor;
-            Debug.Log(fadePanel.color);
         }
     }
 
@@ -52,7 +51,6 @@ public class Fading : MonoBehaviour {
             float alphaChange = Time.deltaTime / fadeTime;
             currentColor.a -= alphaChange;
             fadePanel.color = currentColor;
-            Debug.Log(fadePanel.color);
         } else {
             gameObject.SetActive(false);
         }

@@ -15,11 +15,6 @@ public class MusicManager : MonoBehaviour {
         SceneManager.sceneLoaded += OnLevelLoaded;
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
-
     // Plays music clip on load of level
     public void OnLevelLoaded(Scene scene, LoadSceneMode mode) {
         Debug.Log(scene.buildIndex);
@@ -29,5 +24,9 @@ public class MusicManager : MonoBehaviour {
             audioSource.loop = true;
             audioSource.Play();
         }
+    }
+
+    public void SetVolume(float newVolume) {
+        audioSource.volume = newVolume;
     }
 }

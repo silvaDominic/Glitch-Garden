@@ -2,4 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Difficulty {Easy, Medium, Hard};
+public enum Difficulty {Easy, Normal, Hard};
+
+
