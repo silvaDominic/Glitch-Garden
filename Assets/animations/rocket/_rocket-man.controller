@@ -36,7 +36,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.9285714
+  m_ExitTime: 3
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -48,7 +48,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: moving
+  m_Name: jump-one-space
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -99,7 +99,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102952976078279872}
-    m_Position: {x: 294, y: 53, z: 0}
+    m_Position: {x: 288, y: 48, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102584224122675780}
     m_Position: {x: 328, y: -47, z: 0}
