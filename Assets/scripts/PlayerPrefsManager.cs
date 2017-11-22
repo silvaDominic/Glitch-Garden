@@ -10,7 +10,7 @@ public class PlayerPrefsManager : MonoBehaviour {
     const string LEVEL_KEY = "level_unlocked_"; // Intentional trailing underscore -- Complete definition depends on context
 
     public static void SetMasterVolume (float volume) {
-        if (volume > 0f && volume < 1f) {
+        if (volume >= 0f && volume <= 1f) {
             PlayerPrefs.SetFloat(MASTER_VOLUME_KEY, volume);
         } else {
             Debug.Log("Master volume out of range");
