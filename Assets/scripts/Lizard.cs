@@ -15,11 +15,6 @@ public class Lizard : MonoBehaviour {
         attacker = gameObject.GetComponent<Attacker>();
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
-
     private void OnTriggerEnter2D(Collider2D collision) {
         Debug.Log(name + " collides with " + collision);
 
