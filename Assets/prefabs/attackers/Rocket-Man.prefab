@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4706066884973020}
   - component: {fileID: 212861208347895648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4959630871618942}
   - component: {fileID: 212725404021632822}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right-Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003882127882142}
   - component: {fileID: 212116039777481790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right-Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 114497829530853026}
   - component: {fileID: 114036660624562316}
   - component: {fileID: 114733646858842828}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rocket-Man
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4530720327531770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Object-Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4248035489278268}
   - component: {fileID: 212491834458641796}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left-Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4371856984749524}
   - component: {fileID: 212453589064442466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left-Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356941517245420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 4, z: 0}
+  m_LocalPosition: {x: 2, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4530720327531770}
@@ -256,7 +256,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.17731786, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -267,7 +267,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 0.9}
+  m_Size: {x: 0.8953643, y: 0.9}
   m_EdgeRadius: 0
 --- !u!95 &95658543961920652
 Animator:

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4366878179118142}
   - component: {fileID: 212227242388642886}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4724221953837240}
   - component: {fileID: 212626960577787974}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 61814106989906128}
   - component: {fileID: 114937193319470438}
   - component: {fileID: 114797214122827940}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bird-Bath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,6 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4709867094ffe6c4092f9eede0773b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 114994231835672760, guid: 65f8d05a219ab264c939337241363536,
+    type: 2}
 --- !u!212 &212227242388642886
 SpriteRenderer:
   m_ObjectHideFlags: 1

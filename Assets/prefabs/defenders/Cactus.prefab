@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4046699913856248}
   - component: {fileID: 212241892591440606}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 61737691018125576}
   - component: {fileID: 114734397259111756}
   - component: {fileID: 114881130849665640}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4709867094ffe6c4092f9eede0773b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 114302550983958644, guid: bf479ffdcd834ed4595f3fef60ada712,
+    type: 2}
 --- !u!114 &114881130849665640
 MonoBehaviour:
   m_ObjectHideFlags: 1

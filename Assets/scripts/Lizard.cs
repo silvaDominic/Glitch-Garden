@@ -18,14 +18,14 @@ public class Lizard : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         Debug.Log(name + " collides with " + collision);
 
-        GameObject obj = collision.gameObject;
+        GameObject currentTarget = collision.gameObject;
 
-        // Ignore collision logic if NOT a defender
-        if (!obj.GetComponent<Defender>()) {
+        // Ignore collision logic if NOT a defender or projectile
+        if (!currentTarget.GetComponent<Defender>()) {
             return;
         } else {
             anim.SetBool("isAttacking", true);
-            attacker.Attack(obj);
+            attacker.Attack(currentTarget);
         }
     }
 }

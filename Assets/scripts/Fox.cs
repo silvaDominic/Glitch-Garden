@@ -18,16 +18,16 @@ public class Fox : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         Debug.Log(name + " collides with " + collision);
 
-        GameObject obj = collision.gameObject;
+        GameObject currentTarget = collision.gameObject;
 
         // Ignore collision logic if NOT a defender
-        if (!obj.GetComponent<Defender>()) {
+        if (!currentTarget.GetComponent<Defender>()) {
             return;
-        } else if (obj.GetComponent<GraveStone>()) {
+        } else if (currentTarget.GetComponent<GraveStone>()) {
             anim.SetTrigger("triggerJump");
         } else {
             anim.SetBool("isAttacking", true);
-            attacker.Attack(obj);
+            attacker.Attack(currentTarget);
         }
     }
 }

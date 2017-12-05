@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61850030758081728}
   - component: {fileID: 114145647910768384}
   - component: {fileID: 114829854483960312}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Star-Trophy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4494498674119136}
   - component: {fileID: 212667133977367750}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4456445081305010}
   - component: {fileID: 212932360653017808}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 212290103303687248}
   - component: {fileID: 61635408372002800}
   - component: {fileID: 61401880191491652}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sun-Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4709867094ffe6c4092f9eede0773b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
 --- !u!114 &114829854483960312
 MonoBehaviour:
   m_ObjectHideFlags: 1

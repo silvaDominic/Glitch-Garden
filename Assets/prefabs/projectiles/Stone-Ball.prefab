@@ -22,7 +22,9 @@ GameObject:
   - component: {fileID: 61459794992538306}
   - component: {fileID: 50098058131192490}
   - component: {fileID: 114242625250069676}
-  m_Layer: 0
+  - component: {fileID: 95709727153873578}
+  - component: {fileID: 114994231835672760}
+  m_Layer: 10
   m_Name: Stone-Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4053693743752594}
   - component: {fileID: 212078772792961318}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,6 +119,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.33212093, y: 0.29077387}
   m_EdgeRadius: 0
+--- !u!95 &95709727153873578
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1554061570439126}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 156aafd642e100340855d8c2bd242d0b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114242625250069676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,6 +147,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a8ff00d7e6fe746bcb81484f9e6937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114994231835672760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1554061570439126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8770054d176f17e4fb05e6b65753cbcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 2.5
+  damage: 30
+  rotationSpeed: 10
 --- !u!212 &212078772792961318
 SpriteRenderer:
   m_ObjectHideFlags: 1

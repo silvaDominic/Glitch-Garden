@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4563947458120284}
   - component: {fileID: 212973229704994722}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114712931504423210}
   - component: {fileID: 114048368527512096}
   - component: {fileID: 114057996956540538}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grave-Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4709867094ffe6c4092f9eede0773b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
 --- !u!114 &114470212026210760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4709867094ffe6c4092f9eede0773b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
 --- !u!114 &114712931504423210
 MonoBehaviour:
   m_ObjectHideFlags: 1
