@@ -10,7 +10,7 @@ public class Health : MonoBehaviour {
         health -= damage;
 
         if (health <= 0) {
-            // Optionally trigger a death animation
+            // Optionally trigger a death animation here
             DestroyObject();
         }
     }

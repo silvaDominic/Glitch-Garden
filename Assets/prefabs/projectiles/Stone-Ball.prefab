@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4690872963600150}
   - component: {fileID: 61459794992538306}
   - component: {fileID: 50098058131192490}
-  - component: {fileID: 114242625250069676}
   - component: {fileID: 95709727153873578}
   - component: {fileID: 114994231835672760}
   m_Layer: 10
@@ -66,8 +65,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554061570439126}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.99, y: 2.02, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4053693743752594}
@@ -136,17 +135,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114242625250069676
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554061570439126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a8ff00d7e6fe746bcb81484f9e6937, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114994231835672760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,7 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 2.5
   damage: 30
-  rotationSpeed: 10
 --- !u!212 &212078772792961318
 SpriteRenderer:
   m_ObjectHideFlags: 1

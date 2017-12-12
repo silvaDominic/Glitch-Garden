@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Attacker : MonoBehaviour {
+    [Tooltip("The rate at which an enemy will spawn")]
+    public float spawnFrequency;
+
     private float currentSpeed;
     private GameObject currentTarget;
     private Health health;
@@ -25,10 +28,6 @@ public class Attacker : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log(name + " triggered" + " with " + collision);
-    }
-
     public void SetSpeed(float speed) {
         currentSpeed = speed;
     }
@@ -38,7 +37,6 @@ public class Attacker : MonoBehaviour {
     }
 
     public void StrikeCurrentTarget(float damage) {
-        Debug.Log(gameObject.name + " delivered " + damage + " damage.");
         if (currentTarget) {
             health = currentTarget.GetComponent<Health>();
             if (health) {

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour {
 
-    public Projectile projectile;
     private Health health;
     private GameObject currentTarget;
     private Animator anim;
@@ -21,10 +20,11 @@ public class Defender : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log(name + " triggered" + " with " + collision);
-        currentTarget = collision.gameObject;
-    }
+    // Figure out why Attack works for receiving currentTarget but OnTriggerEnter2D doesn't
+    //private void OnTriggerEnter2D(Collider2D collision) {
+    //    Debug.Log(name + " triggered" + " with " + collision);
+    //    currentTarget = collision.gameObject;
+    //}
 
     private void OnTriggerExit2D(Collider2D collision) {
         Debug.Log("On exit, " + collision.name);
@@ -41,22 +41,7 @@ public class Defender : MonoBehaviour {
         }
     }
 
-    public void Attack() {
-        if (projectile) {
-            LaunchProjectile();
-        } else {
-            Debug.Log("No projectile attached to Component");
-        }
-    }
-
     public void Attack(GameObject obj) {
         currentTarget = obj;
-    }
-
-    public void LaunchProjectile() {
-        Debug.Log("Fired " + projectile.name);
-        Vector3 startingPosition = gameObject.transform.position + new Vector3(0.5f, 0, 0);
-        Projectile fired_projectile = Instantiate(projectile, startingPosition, Quaternion.identity);
-        fired_projectile.GetComponent<Rigidbody2D>().velocity = new Vector3(projectile.projectileSpeed, 0, 0);
     }
 }

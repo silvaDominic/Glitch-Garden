@@ -55,8 +55,24 @@ GameObject:
   - component: {fileID: 61814106989906128}
   - component: {fileID: 114937193319470438}
   - component: {fileID: 114797214122827940}
+  - component: {fileID: 114280885267209194}
   m_Layer: 11
   m_Name: Bird-Bath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1615338813865162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4294111900554944}
+  m_Layer: 10
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,13 +85,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1569064404975748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 1.56, y: 4.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4366878179118142}
   - {fileID: 4724221953837240}
+  - {fileID: 4294111900554944}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4294111900554944
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1615338813865162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06, y: 0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4077053141652248}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4366878179118142
 Transform:
@@ -145,6 +175,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114280885267209194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569064404975748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21efaa8c2b14d2240968710919632752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 114994231835672760, guid: 65f8d05a219ab264c939337241363536,
+    type: 2}
+  gun: {fileID: 1615338813865162}
 --- !u!114 &114797214122827940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,8 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4709867094ffe6c4092f9eede0773b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 114994231835672760, guid: 65f8d05a219ab264c939337241363536,
-    type: 2}
 --- !u!212 &212227242388642886
 SpriteRenderer:
   m_ObjectHideFlags: 1

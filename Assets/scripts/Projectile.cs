@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour {
 
     private Health health;
     private GameObject currentTarget;
-    public float projectileSpeed, damage, rotationSpeed;
+    public float projectileSpeed, damage;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +19,6 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         currentTarget = collision.gameObject;
-        Debug.Log(gameObject.name + " collided with " + collision.name);
         if (currentTarget) {
             health = currentTarget.GetComponent<Health>();
             if (health) {

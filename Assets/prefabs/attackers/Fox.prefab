@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1796073632764920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4653897206527238}
@@ -133,7 +133,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d5981a33bb015a442874db47557c3fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc77a6461e047b447ad36c7319df6f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnFrequency: 4
 --- !u!212 &212330835466868750
 SpriteRenderer:
   m_ObjectHideFlags: 1
