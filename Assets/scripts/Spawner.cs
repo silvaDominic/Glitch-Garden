@@ -4,36 +4,39 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
-    public GameObject[] NPCs;
+    public Attacker[] Attackers;
     private Spawner[] spawners;
     private int numberOfSpawners;
     private bool isSpawning = false;
+    private GameObject parentObject;
 
     private void Start() {
+        parentObject = GameObject.Find(Constants.ATTACKER_PARENT_OBJ);
+        if (parentObject == null) {
+            parentObject = new GameObject(Constants.ATTACKER_PARENT_OBJ);
+        }
         spawners = GameObject.FindObjectsOfType<Spawner>();
         numberOfSpawners = spawners.Length;
     }
 
     private void Update() {
-        foreach (GameObject npc in NPCs) {
+        foreach (Attacker attacker in Attackers) {
             if (!isSpawning) {
                 isSpawning = true;
-                StartCoroutine(SpawnNPC(npc));
+                StartCoroutine(SpawnNPC(attacker));
             }
         }
     }
 
-    private IEnumerator SpawnNPC(GameObject npc) {
-        GameObject parentObject = GameObject.Find("Attackers");
-
-        float spawnDelay = parentObject.spawnFrequency;
+    private IEnumerator SpawnNPC(Attacker attacker) {
+        float spawnDelay = attacker.spawnFrequency;
         float spawnRate = (1 / spawnDelay) * Time.deltaTime; // Spawn rate per second
 
         yield return new WaitForSeconds(spawnDelay);
 
-        npc = Instantiate(npc) as GameObject;
-        npc.transform.parent = parentObject.transform;
-        npc.transform.position = gameObject.transform.position;
+        attacker = Instantiate(attacker);
+        attacker.transform.parent = parentObject.transform;
+        attacker.transform.position = gameObject.transform.position;
         isSpawning = false;
     }
 }

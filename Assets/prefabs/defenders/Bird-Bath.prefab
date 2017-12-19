@@ -53,12 +53,13 @@ GameObject:
   - component: {fileID: 4077053141652248}
   - component: {fileID: 95625010890911300}
   - component: {fileID: 61814106989906128}
-  - component: {fileID: 114937193319470438}
-  - component: {fileID: 114797214122827940}
+  - component: {fileID: 50819013566948310}
+  - component: {fileID: 114275536483110740}
   - component: {fileID: 114280885267209194}
+  - component: {fileID: 114854807553219628}
   m_Layer: 11
   m_Name: Bird-Bath
-  m_TagString: Untagged
+  m_TagString: Defender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,6 +134,26 @@ Transform:
   m_Father: {fileID: 4077053141652248}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50819013566948310
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569064404975748}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61814106989906128
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -175,6 +196,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114275536483110740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569064404975748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6668497468d81a4e8142b4fb498f06d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114280885267209194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,7 +221,7 @@ MonoBehaviour:
   projectile: {fileID: 114994231835672760, guid: 65f8d05a219ab264c939337241363536,
     type: 2}
   gun: {fileID: 1615338813865162}
---- !u!114 &114797214122827940
+--- !u!114 &114854807553219628
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -201,17 +233,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
---- !u!114 &114937193319470438
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1569064404975748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4709867094ffe6c4092f9eede0773b6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212227242388642886
 SpriteRenderer:
   m_ObjectHideFlags: 1

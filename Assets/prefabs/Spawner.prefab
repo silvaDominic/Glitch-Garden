@@ -51,4 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b218f051021ea4ca5822fc1b71d6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPC: {fileID: 0}
+  NPCs: []
+  NpcType:
+  - Attackers
+  - Attackers

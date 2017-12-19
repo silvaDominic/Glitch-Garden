@@ -53,12 +53,13 @@ GameObject:
   - component: {fileID: 95320574156997808}
   - component: {fileID: 212171074925100276}
   - component: {fileID: 61737691018125576}
-  - component: {fileID: 114714983803685504}
-  - component: {fileID: 114881130849665640}
+  - component: {fileID: 50301900695725898}
+  - component: {fileID: 114553617394656658}
+  - component: {fileID: 114901818199585530}
   - component: {fileID: 114740607326422166}
   m_Layer: 11
   m_Name: Cactus
-  m_TagString: Untagged
+  m_TagString: Defender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +105,26 @@ Transform:
   m_Father: {fileID: 4600653655520276}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50301900695725898
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699051300015976}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61737691018125576
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -146,7 +167,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114714983803685504
+--- !u!114 &114553617394656658
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -154,7 +175,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1699051300015976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4709867094ffe6c4092f9eede0773b6f, type: 3}
+  m_Script: {fileID: 11500000, guid: 52cdddd93f09cd2409d19b2fd96f21f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114740607326422166
@@ -171,7 +192,7 @@ MonoBehaviour:
   projectile: {fileID: 114302550983958644, guid: bf479ffdcd834ed4595f3fef60ada712,
     type: 2}
   gun: {fileID: 1058768086924606}
---- !u!114 &114881130849665640
+--- !u!114 &114901818199585530
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

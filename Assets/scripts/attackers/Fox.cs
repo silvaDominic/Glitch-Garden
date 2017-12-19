@@ -2,32 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Attacker))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class Fox : MonoBehaviour {
-
-    Animator anim;
-    Attacker attacker;
+public class Fox : Attacker {
 
 	// Use this for initialization
 	void Start () {
-        anim = gameObject.GetComponent<Animator>();
-        attacker = gameObject.GetComponent<Attacker>();
+        base.Start();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         Debug.Log(name + " collides with " + collision);
 
         GameObject currentTarget = collision.gameObject;
+        Debug.Log("Current Target: " + currentTarget);
 
-        // Ignore collision logic if NOT a defender
-        if (!currentTarget.GetComponent<Defender>()) {
+        // Ignore collision logic if same NPC type
+        if (currentTarget.tag == Constants.ATTACKER || currentTarget.tag == Constants.PROJECTILE){
             return;
         } else if (currentTarget.GetComponent<GraveStone>()) {
-            anim.SetTrigger("triggerJump");
+            GetAnimator().SetTrigger(Constants.JUMP);
         } else {
-            anim.SetBool("isAttacking", true);
-            attacker.Attack(currentTarget);
+            GetAnimator().SetBool(Constants.ATTACK, true);
+            Attack(currentTarget);
         }
     }
 }

@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Attacker))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class RocketMan : MonoBehaviour {
-
-    Animator anim;
-    Attacker attacker;
+public class RocketMan : Attacker {
 
     // Use this for initialization
     void Start() {
-        anim = gameObject.GetComponent<Animator>();
-        attacker = gameObject.GetComponent<Attacker>();
+        base.Start();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -20,14 +15,14 @@ public class RocketMan : MonoBehaviour {
 
         GameObject currentTarget = collision.gameObject;
 
-        // Ignore collision logic if NOT a defender
-        if (!currentTarget.GetComponent<Defender>()) {
+        // Ignore collision logic if same NPC type
+        if (currentTarget.tag == Constants.ATTACKER || currentTarget.tag == Constants.PROJECTILE) {
             return;
         } else if (currentTarget.GetComponent<GraveStone>()) {
-            anim.SetTrigger("triggerJump");
+            GetAnimator().SetTrigger(Constants.JUMP);
         } else {
-            anim.SetBool("isAttacking", true);
-            attacker.Attack(currentTarget);
+            GetAnimator().SetBool(Constants.ATTACK, true);
+            Attack(currentTarget);
         }
     }
 }

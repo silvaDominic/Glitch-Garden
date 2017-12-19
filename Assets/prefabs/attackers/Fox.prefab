@@ -39,12 +39,11 @@ GameObject:
   - component: {fileID: 212840004859410904}
   - component: {fileID: 61941637437869834}
   - component: {fileID: 50127068593877380}
-  - component: {fileID: 114774649098952858}
-  - component: {fileID: 114006452015636532}
-  - component: {fileID: 114771460155359312}
+  - component: {fileID: 114053051306391320}
+  - component: {fileID: 114806204834691026}
   m_Layer: 9
   m_Name: Fox
-  m_TagString: Untagged
+  m_TagString: Attacker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +116,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 1
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
@@ -138,18 +137,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114006452015636532
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1796073632764920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae11c60299b935f40a9f92a06b2cdd1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114771460155359312
+--- !u!114 &114053051306391320
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -161,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
---- !u!114 &114774649098952858
+--- !u!114 &114806204834691026
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -169,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1796073632764920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc77a6461e047b447ad36c7319df6f5d, type: 3}
+  m_Script: {fileID: 11500000, guid: ae11c60299b935f40a9f92a06b2cdd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnFrequency: 4

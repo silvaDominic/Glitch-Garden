@@ -6,6 +6,8 @@ public class SpawnDefender : MonoBehaviour {
 
     public Camera camera;
     private GameObject defendersParent;
+    [HideInInspector]
+    public Dictionary<string, bool> availableSpaces = new Dictionary<string, bool>();
 
     private void Start() {
         defendersParent = GameObject.Find("Defenders");
@@ -15,10 +17,18 @@ public class SpawnDefender : MonoBehaviour {
     }
 
     private void OnMouseDown() {
-        GameObject newDefender = Instantiate(CustomButton.selectedDefender);
-        newDefender.transform.parent = defendersParent.transform;
-        newDefender.transform.position = MousePositionToWorldUnits();
-        Debug.Log(newDefender.name + " positioned at " + newDefender.transform.position);
+        bool gridSpaceAvailable = true;
+        Vector2 selectedPosition = MousePositionToWorldUnits();
+        if (availableSpaces.TryGetValue(selectedPosition.ToString(), out gridSpaceAvailable)) {
+            Debug.LogWarning("Defender already position at: " + selectedPosition);
+        } else {
+            availableSpaces.Add(selectedPosition.ToString(), true);
+            GameObject newDefender = Instantiate(CustomButton.selectedDefender);
+            newDefender.transform.parent = defendersParent.transform;
+            newDefender.transform.position = selectedPosition;
+            Debug.Log(newDefender.name + " positioned at " + newDefender.transform.position);
+        }
+
     }
 
     public Vector2 MousePositionToWorldUnits() {
@@ -33,5 +43,13 @@ public class SpawnDefender : MonoBehaviour {
         worldUnits.y = Mathf.Floor(worldUnits.y += 0.4f);
 
         return worldUnits;
+    }
+
+    public void RemoveElementFromGrid(string name) {
+        availableSpaces.Remove(name);
+    }
+
+    public void AddElementToGrid(string name, Object obj) {
+        availableSpaces.Add(name, obj);
     }
 }

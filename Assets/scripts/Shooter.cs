@@ -10,9 +10,9 @@ public class Shooter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        projectilesParent = GameObject.Find("Projectiles");
+        projectilesParent = GameObject.Find(Constants.PROJECTILE_PARENT_OBJ);
         if (projectilesParent == null) {
-            projectilesParent = new GameObject("Projectiles");
+            projectilesParent = new GameObject(Constants.PROJECTILE_PARENT_OBJ);
         }
 	}
 
