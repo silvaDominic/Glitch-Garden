@@ -7,6 +7,7 @@ public class Lizard : Attacker {
 
     // Use this for initialization
     void Start() {
+        base.Start();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -15,7 +16,7 @@ public class Lizard : Attacker {
         GameObject currentTarget = collision.gameObject;
 
         // Ignore collision logic if same NPC type
-        if (currentTarget.tag == Constants.ATTACKER) {
+        if (currentTarget.tag == Constants.ATTACKER || currentTarget.tag == Constants.PROJECTILE) {
             return;
         } else {
             GetAnimator().SetBool(Constants.ATTACK, true);

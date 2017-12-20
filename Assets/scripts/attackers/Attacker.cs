@@ -5,5 +5,5 @@ using UnityEngine;
 public abstract class Attacker : Npc {
 
     [Tooltip("The rate at which an enemy will spawn")]
-    public float spawnFrequency;
+    public float meanSpawnFreuqency;
 }
