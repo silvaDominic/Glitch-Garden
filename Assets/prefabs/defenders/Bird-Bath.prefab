@@ -102,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1615338813865162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 0.05, z: 0}
+  m_LocalPosition: {x: 0.06, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4077053141652248}
@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6668497468d81a4e8142b4fb498f06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 30
 --- !u!114 &114280885267209194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,6 +222,7 @@ MonoBehaviour:
   projectile: {fileID: 114994231835672760, guid: 65f8d05a219ab264c939337241363536,
     type: 2}
   gun: {fileID: 1615338813865162}
+  shooterReach: 4
 --- !u!114 &114854807553219628
 MonoBehaviour:
   m_ObjectHideFlags: 1

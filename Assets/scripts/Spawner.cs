@@ -10,13 +10,11 @@ public class Spawner : MonoBehaviour {
     private bool isSpawning = false;
     private GameObject parentObject;
     [Range(0, 1f)]
-    public float staggerAmount = 0f;
+    public float staggerAmount = Constants.DEFAULT_STAGGER_AMOUNT;
 
     private void Start() {
-        parentObject = GameObject.Find(Constants.ATTACKER_PARENT_OBJ);
-        if (parentObject == null) {
-            parentObject = new GameObject(Constants.ATTACKER_PARENT_OBJ);
-        }
+        parentObject = gameObject;
+
         spawners = GameObject.FindObjectsOfType<Spawner>();
         numberOfSpawners = spawners.Length;
     }

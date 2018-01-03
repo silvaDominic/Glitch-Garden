@@ -26,6 +26,12 @@ public class MusicManager : MonoBehaviour {
         }
     }
 
+    public void PlayClip(AudioClip clip) {
+        audioSource.clip = clip;
+        audioSource.loop = false;
+        audioSource.Play();
+    }
+
     public void SetVolume(float newVolume) {
         audioSource.volume = newVolume;
     }

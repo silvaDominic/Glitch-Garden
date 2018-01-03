@@ -315,7 +315,7 @@ Prefab:
     - target: {fileID: 114292816601432564, guid: ad54051c85f9401458173a3d60ca3bbe,
         type: 2}
       propertyPath: LevelMusicChangeArray.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4537021349939254, guid: ad54051c85f9401458173a3d60ca3bbe, type: 2}
       propertyPath: m_LocalPosition.x
@@ -359,6 +359,11 @@ Prefab:
       propertyPath: LevelMusicChangeArray.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: ca1097b017c690b41935f644ea0a8f9f, type: 3}
+    - target: {fileID: 114292816601432564, guid: ad54051c85f9401458173a3d60ca3bbe,
+        type: 2}
+      propertyPath: LevelMusicChangeArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: c09f90fd56cca414d9eeb8a0082beab8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad54051c85f9401458173a3d60ca3bbe, type: 2}
   m_IsPrefabParent: 0

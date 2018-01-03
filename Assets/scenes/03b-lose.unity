@@ -539,7 +539,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'NULL REFERENCE: NO GARDEN FOUND'
+  m_Text: YOUR GARDEN HAS BEEN RUINED!
 --- !u!222 &861566567
 CanvasRenderer:
   m_ObjectHideFlags: 0

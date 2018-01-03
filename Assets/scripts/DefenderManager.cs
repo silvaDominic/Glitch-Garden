@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnDefender : MonoBehaviour {
+public class DefenderManager : MonoBehaviour {
 
     public Camera camera;
     private GameObject defendersParent;
     [HideInInspector]
-    public Dictionary<string, bool> availableSpaces = new Dictionary<string, bool>();
+    public static Dictionary<string, bool> availableSpaces = new Dictionary<string, bool>();
+    private StarDisplay starDisplay;
 
     private void Start() {
+        starDisplay = GameObject.FindObjectOfType<StarDisplay>();
+
         defendersParent = GameObject.Find("Defenders");
         if (defendersParent == null) {
             defendersParent = new GameObject("Defenders");
@@ -22,13 +25,18 @@ public class SpawnDefender : MonoBehaviour {
         if (availableSpaces.TryGetValue(selectedPosition.ToString(), out gridSpaceAvailable)) {
             Debug.LogWarning("Defender already position at: " + selectedPosition);
         } else {
-            availableSpaces.Add(selectedPosition.ToString(), true);
-            GameObject newDefender = Instantiate(CustomButton.selectedDefender);
-            newDefender.transform.parent = defendersParent.transform;
-            newDefender.transform.position = selectedPosition;
-            Debug.Log(newDefender.name + " positioned at " + newDefender.transform.position);
+            if (checkForEnoughFunds()) {
+                SpawnDefender(selectedPosition);
+                BuyDefender();
+            }
         }
+    }
 
+    private void SpawnDefender(Vector2 selectedPosition) {
+        availableSpaces.Add(selectedPosition.ToString(), true);
+        Defender newDefender = Instantiate(CustomButton.selectedDefender);
+        newDefender.transform.parent = defendersParent.transform;
+        newDefender.transform.position = selectedPosition;
     }
 
     public Vector2 MousePositionToWorldUnits() {
@@ -51,5 +59,21 @@ public class SpawnDefender : MonoBehaviour {
 
     public void AddElementToGrid(string name, Object obj) {
         availableSpaces.Add(name, obj);
+    }
+
+    public void ClearGrid() {
+        availableSpaces.Clear();
+    }
+
+    private bool checkForEnoughFunds() {
+        if (StarDisplay.starCount - CustomButton.selectedDefender.cost >= 0) {
+            return true;
+        }
+        Debug.LogWarning("Not enough stars to buy defender.");
+        return false;
+    }
+
+    private void BuyDefender() {
+        starDisplay.UseStars(CustomButton.selectedDefender.cost);
     }
 }

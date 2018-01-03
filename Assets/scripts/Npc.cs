@@ -37,11 +37,13 @@ public abstract class Npc : MonoBehaviour {
     // Delivers phyical damage to target
     // Called from Animation Clip
     public void StrikeCurrentTarget(float damage) {
-        Debug.Log(name + " delivered " + damage + " damage to " + currentTarget.name);
         if (currentTarget) {
             health = currentTarget.GetComponent<Health>();
             if (health) {
                 health.DealDamage(damage);
+                if (health.GetHealth() <= 0) {
+                    DestroyNPC(currentTarget);
+                }
             }
         }
     }
@@ -50,19 +52,19 @@ public abstract class Npc : MonoBehaviour {
         currentTarget = obj;
     }
 
-    public GameObject GetCurrentTarget() {
-        return currentTarget;
+    public Animator GetAnimator() {
+        return anim;
     }
 
     public void SetSpeed(float speed) {
         currentSpeed = speed;
     }
 
-    public float GetCurrentSpeed() {
-        return currentSpeed;
-    }
+    public virtual void DestroyNPC(GameObject gameObject) {
+        // --- Optionally trigger a death animation here ---
 
-    public Animator GetAnimator() {
-        return anim;
+        // Removes gameobject position from available grid spaces
+        Debug.Log("Destroying " + gameObject.name + " and removing from grid at " + gameObject.transform.position);
+        Destroy(gameObject);
     }
 }

@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class CustomButton : MonoBehaviour {
 
-    public GameObject defenderPrefab;
-    private Color spriteColor;
+    public Defender defenderPrefab;
     private CustomButton[] buttons;
-    public static GameObject selectedDefender;
+    public static Defender selectedDefender;
 
     // Use this for initialization
     void Start () {

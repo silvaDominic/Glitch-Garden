@@ -11,19 +11,21 @@ public class Fox : Attacker {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log(name + " collides with " + collision);
+        if (collision != null) {
+            Debug.Log(name + " collides with " + collision);
 
-        GameObject currentTarget = collision.gameObject;
-        Debug.Log("Current Target: " + currentTarget);
+            GameObject currentTarget = collision.gameObject;
+            Debug.Log("Current Target: " + currentTarget);
 
-        // Ignore collision logic if same NPC type
-        if (currentTarget.tag == Constants.ATTACKER || currentTarget.tag == Constants.PROJECTILE){
-            return;
-        } else if (currentTarget.GetComponent<GraveStone>()) {
-            GetAnimator().SetTrigger(Constants.JUMP);
-        } else {
-            GetAnimator().SetBool(Constants.ATTACK, true);
-            Attack(currentTarget);
+            // Ignore collision logic if same NPC type
+            if (currentTarget.tag == Constants.ATTACKER || currentTarget.tag == Constants.PROJECTILE) {
+                return;
+            } else if (currentTarget.GetComponent<GraveStone>()) {
+                GetAnimator().SetTrigger(Constants.JUMP);
+            } else {
+                GetAnimator().SetBool(Constants.ATTACK, true);
+                Attack(currentTarget);
+            }
         }
     }
 }

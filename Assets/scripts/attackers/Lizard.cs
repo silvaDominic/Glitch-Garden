@@ -11,16 +11,18 @@ public class Lizard : Attacker {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log(name + " collides with " + collision);
+        if (collision != null) {
+            Debug.Log(name + " collides with " + collision);
 
-        GameObject currentTarget = collision.gameObject;
+            GameObject currentTarget = collision.gameObject;
 
-        // Ignore collision logic if same NPC type
-        if (currentTarget.tag == Constants.ATTACKER || currentTarget.tag == Constants.PROJECTILE) {
-            return;
-        } else {
-            GetAnimator().SetBool(Constants.ATTACK, true);
-            Attack(currentTarget);
+            // Ignore collision logic if same NPC type
+            if (currentTarget.tag == Constants.ATTACKER || currentTarget.tag == Constants.PROJECTILE) {
+                return;
+            } else {
+                GetAnimator().SetBool(Constants.ATTACK, true);
+                Attack(currentTarget);
+            }
         }
     }
 }
