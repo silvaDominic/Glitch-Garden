@@ -14,6 +14,10 @@ public class StarTrophy : Defender {
         starDisplay = GameObject.FindObjectOfType<StarDisplay>();
     }
 
+    public override void Update() {
+        // No Update logic neccessary for StarTrophy
+    }
+
     private void AddStars(int amount) {
         starDisplay.AddStars(amount);
     }

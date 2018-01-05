@@ -7,7 +7,7 @@ public class DefenderManager : MonoBehaviour {
     public Camera camera;
     private GameObject defendersParent;
     [HideInInspector]
-    public static Dictionary<string, bool> availableSpaces = new Dictionary<string, bool>();
+    public Dictionary<string, bool> availableSpaces = new Dictionary<string, bool>();
     private StarDisplay starDisplay;
 
     private void Start() {
@@ -33,7 +33,7 @@ public class DefenderManager : MonoBehaviour {
     }
 
     private void SpawnDefender(Vector2 selectedPosition) {
-        availableSpaces.Add(selectedPosition.ToString(), true);
+        AddElementToGrid(selectedPosition.ToString(), true);
         Defender newDefender = Instantiate(CustomButton.selectedDefender);
         newDefender.transform.parent = defendersParent.transform;
         newDefender.transform.position = selectedPosition;
@@ -57,8 +57,8 @@ public class DefenderManager : MonoBehaviour {
         availableSpaces.Remove(name);
     }
 
-    public void AddElementToGrid(string name, Object obj) {
-        availableSpaces.Add(name, obj);
+    public void AddElementToGrid(string name, bool availableSpace) {
+        availableSpaces.Add(name, availableSpace);
     }
 
     public void ClearGrid() {

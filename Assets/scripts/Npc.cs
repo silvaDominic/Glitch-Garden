@@ -13,15 +13,10 @@ public abstract class Npc : MonoBehaviour {
         anim = GetComponent<Animator>();
     }
 
-    public void Update() {
+    public virtual void Update() {
         if (currentSpeed != 0) {
             gameObject.transform.Translate(Vector3.left * currentSpeed * Time.deltaTime);
         }
-        //if (currentTarget != null) {
-        //    if (anim.parameterCount > 0) {
-        //        anim.SetBool(Constants.ATTACK, false);
-        //    }
-        //}
 
         if (currentTarget == null) {
             anim.SetBool(Constants.ATTACK, false);
@@ -60,11 +55,11 @@ public abstract class Npc : MonoBehaviour {
         currentSpeed = speed;
     }
 
-    public virtual void DestroyNPC(GameObject gameObject) {
+    protected virtual void DestroyNPC(GameObject gameObject) {
         // --- Optionally trigger a death animation here ---
 
         // Removes gameobject position from available grid spaces
-        Debug.Log("Destroying " + gameObject.name + " and removing from grid at " + gameObject.transform.position);
+        Debug.Log("Destroying " + gameObject.name);
         Destroy(gameObject);
     }
 }

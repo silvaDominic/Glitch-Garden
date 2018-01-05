@@ -22,4 +22,7 @@ public class Constants : MonoBehaviour {
 
     public const int DEFALT_STAR_COUNT = 100;
     public const float DEFAULT_STAGGER_AMOUNT = 0.75f;
+
+    public const int SHOT_SOUND = 0;
+    public const int IMPACT_SOUND = 1;
 }

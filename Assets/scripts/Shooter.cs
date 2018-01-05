@@ -63,7 +63,7 @@ public class Shooter : MonoBehaviour {
     }
 
     private void LaunchProjectile() {
-        Projectile fired_projectile = Instantiate(projectile);
+        Projectile fired_projectile = Instantiate(projectile) as Projectile;
         fired_projectile.GetComponent<Rigidbody2D>().velocity = new Vector3(projectile.projectileSpeed, 0, 0);
         fired_projectile.transform.parent = projectilesParent.transform;
         fired_projectile.transform.position = gun.transform.position;

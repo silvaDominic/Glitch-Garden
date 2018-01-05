@@ -9,7 +9,6 @@ public class GameTimer : MonoBehaviour {
     public float levelDuration;
     private Slider gameClock;
     private LevelManager levelManager;
-    private AudioSource audioSource;
     private bool TimeIsUp = false;
 
     // Use this for initialization
@@ -18,7 +17,6 @@ public class GameTimer : MonoBehaviour {
         gameClock.maxValue = levelDuration;
 
         levelManager = GameObject.FindObjectOfType<LevelManager>();
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,13 +25,8 @@ public class GameTimer : MonoBehaviour {
         gameClock.value = levelDuration;
 
         if (levelDuration <= 0 && !TimeIsUp) {
-            audioSource.Play();
-            Invoke("LoadNextLevel", audioSource.clip.length);
+            levelManager.LoadLevel(Constants.WIN_SCREEN);
             TimeIsUp = true;
         }
-    }
-
-    private void LoadNextLevel() {
-        levelManager.LoadLevel(Constants.WIN_SCREEN);
     }
 }

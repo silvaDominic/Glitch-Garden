@@ -56,11 +56,11 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.5
         value: {x: -0.025, y: 0, z: 0}
-        inSlope: {x: -0.11249997, y: 0, z: 0}
-        outSlope: {x: -0.11249997, y: 0, z: 0}
+        inSlope: {x: -0.14999995, y: 0, z: 0}
+        outSlope: {x: -0.14999995, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.56666666
+        time: 0.5833333
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0.33750004, y: 0, z: 0}
         outSlope: {x: 0.33750004, y: 0, z: 0}
@@ -186,11 +186,11 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.5
         value: -0.025
-        inSlope: -0.11249997
-        outSlope: -0.11249997
+        inSlope: -0.14999995
+        outSlope: -0.14999995
         tangentMode: 34
       - serializedVersion: 2
-        time: 0.56666666
+        time: 0.5833333
         value: 0
         inSlope: 0.33750004
         outSlope: 0.33750004
@@ -284,7 +284,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 34
       - serializedVersion: 2
-        time: 0.56666666
+        time: 0.5833333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -378,7 +378,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 34
       - serializedVersion: 2
-        time: 0.56666666
+        time: 0.5833333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -431,10 +431,66 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
+  - time: 0
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.083333336
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.41666666
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5833333
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.73333335
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.9
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.0833334
     functionName: StrikeCurrentTarget
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 5
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.0833334
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
